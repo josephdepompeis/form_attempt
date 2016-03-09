@@ -1,0 +1,55 @@
+<%= form_for do |f| %>
+<div class="field">
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</div>
+<div>
+  Favorites:
+      <ul>
+        <li class="item">
+          <%= f.label :chocolate %><br>
+          <%= f.check_box_tag :chocolate %>
+        </li>
+
+        <li class="item">
+          <%= f.label :rainbows %><br>
+          <%= f.check_box_tag :rainbows %>
+        </li>
+
+        <li class="item">
+          <%= f.label :puppies %><br>
+          <%= f.check_box_tag :puppies %>
+        </li>
+
+        <li class="item">
+          <%= f.label :cold_hard_cash %><br>
+          <%= f.check_box_tag :cold_hard_cash %>
+        </li>
+
+    <%= f.submit %>
+<% end %>
+
+
+<!--
+    <div>
+      Favorites:
+      <ul>
+        <li class="item">
+          <%= check_box_tag :chocolate %> I like <%= label_tag :chocolate %>
+        </li>
+        <li class="item">
+          <%= check_box_tag :rainbows %> I like <%= label_tag :rainbows %>
+        </li>
+        <li class="item">
+          <%= check_box_tag :puppies %> I like <%= label_tag :puppies %>
+        </li>
+        <% if Rails.env.development? %>
+          <li class="item">
+            <%= check_box_tag :cold_hard_cash %> I like <%= label_tag :cold_hard_cash %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <%= submit_tag %>
+  <% end %>
+<% end %> -->
